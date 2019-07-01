@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    
+    body{
+            font-family: sans-serif;
+        }
+    .cont{
+        grid-template-areas: 
+        "header header header header"
+        "img tabla tabla tabla";
+        display: grid;
+        margin-bottom: .5em;
+    }
+    .cont h1{
+        font-weight: lighter;
+        text-align: center;
+        margin-bottom: 1.5em;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        background: rgb(14, 117, 5);
+        grid-area: header;
+        margin: 0;
+        font-size: 1.3em;
+        
+    }
+    .cont span{
+        justify-content: center;
+        align-items: center;
+        grid-area: img;
+        display: flex;
+    }
+    .cont span img{
+        width: 10em;
+    }
+    .cont tabla{
+        grid-area: tabla;
+        background: rgb(255, 255, 255);
+    }
+    .Espacio{
+        padding-right: 3em;
+    }
+    #Txtlibreta{
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(129, 129, 129);
+    }
+    #TxtDistrito{
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(105, 105, 105);
+    }
+    .cont2 {
+        grid-template-rows: .6fr .5fr .7fr .2fr;
+        margin-bottom: 1rem;
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+     
+    }
+    .cont2 h1{
+        text-align: center;
+        margin-bottom: 1.2em;
+        color: white;
+        text-transform: uppercase;
+        grid-column: 1 / 5;
+        grid-row: 1 / 2;
+        margin: 0;
+        background: linear-gradient(rgb(2, 87, 2), #018613);
+        margin: 0;
+        font-size: 1.3em;
+        font-weight: lighter;
+    }
+    .cont2 span{
+        grid-column: 1 / 2;
+        grid-row: 2 / 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    span img{
+        width: 10em;
+    }
+    .cont2 p{
+        display: flex;
+        align-items: center;
+        padding: 3px;
+        grid-column: 2 / 5;
+        grid-row: 2 / 3;
+        margin: 0;
+        font-size: .8em;
+        background: rgb(255, 255, 255);
+    }
+    .cont2 #tabla1{
+        grid-column: 2 / 5;
+        grid-row: 3 / 4;
+        background: rgb(255, 255, 255);
+    }
+    .cont2 #tabla2{
+        grid-row: 4 / 5;
+        padding: 0;
+        background: rgb(255, 255, 255);
+        grid-column: 2 / 5;
+       
+    }
+    .Espacio{
+        font-size: .6em;
+    }
+    .BT{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="cont">
+
+            <h1>Datos personales</h1>
+
+            <span>
+                <img src="" alt="Le debo la imagen se me callo el internet y tengo pocos datos">
+
+            </span>
+        
+            <table>
+                <tr>
+                    <td>
+                        Documento:
+                    </td>
+                    <td class="Espacio">
+                        <select>
+                            <option>CC</option>
+                        </select>
+                        <input type="text">
+                    </td>
+                    <td>
+                        Expedida en:
+                    </td>
+                    <td>
+                        <select style="width: 222px;">
+                            <option>SANTA MARTA</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Primer apellido:
+                    </td>
+                    <td class="Espacio">
+                        <input type="text"  size="27">
+                    </td>
+                    <td>
+                        Lugar de <br> nacimiento:
+                    </td>
+                    <td class="Espacio">
+                        <input type="text" id="TxtLNac" size="10"> DD/MM/AAAA
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Segundo apellido:
+                    </td>
+                    <td class="Espacio">
+                        <input type="text" size="27">
+                    </td>
+                    <td>
+                        País:
+                    </td>
+                    <td>
+                        <select  style="width: 222px;">
+                            <option>COLOMBIA</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Nombres:
+                    </td>
+                    <td class="Espacio">
+                        <input type="text"  size="27">
+                    </td>
+                    <td>
+                        Departamento:
+                    </td>
+                    <td>
+                        <select  style="width: 222px;">
+                            <option>INTERNACIONAL</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Libreta militar:
+                    </td>
+                    <td class="Espacio">
+                        <input type="radio" > Si
+                        <input type="radio" >No
+                        <input type="text" size="12">
+                    </td>
+                    <td>
+                        Municipio:
+                    </td>
+                    <td>
+                        <select style="width: 222px">
+                            <option>SANTA MARTA</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Clase:
+                    </td>
+                    <td>
+                        <select  style="color: rgb(131, 128, 128)" >
+                            <option>SELECCIONA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Distrito:
+                    </td>
+                    <td>
+                        <input type="text" size="27">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="cont2">
+                <h1>Estudios secundarios</h1>
+        
+                <span>
+                    <img src="" alt="Le debo la imagen se me callo el internet y tengo pocos datos">
+                </span>
+
+                <p>
+                    Marque el último grado aprobado (los grados de 1° a 6° de bachillerato equivalen a los grados de 6° a 11° de educación básica secundaria y media).
+                </p>
+
+                <table id="tabla1">
+                    <tr>
+                        <td>
+                            Nivel de <br>
+                            aprobación
+                        </td>
+                        <td>
+                            <input type="radio">1°
+                            <input type="radio">2°
+                            <input type="radio">3°
+                            <input type="radio">4°
+                            <input type="radio">5°
+                            <input type="radio">6°
+                            <input type="radio">7°
+                            <input type="radio">8°
+                            <input type="radio">9°
+                            <input type="radio">10°
+                            <input type="radio">11°
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Nombre de la <br>
+                            institución
+                        </td>
+                        <td>
+                            <input type="text" size="27">
+                        </td>
+                    </tr>
+                </table>
+                <table id="tabla2">
+                    <tr>
+                        <td>Título obtenido</td>
+                        <td>
+                            <input type="text" size="27">
+                        </td>
+                        <td>
+                            Fecha de <br>
+                            Graduación
+                        </td>
+                        <td class="Espacio">
+                            <input type="text" size="10"> DD/MM/AAAA
+                        </td>
+                    </tr>
+                </table>
+        </div>
+        
+        <div class="BT">
+            <button>Submit</button>
+        </div>
+    
+</body>
+</html>
